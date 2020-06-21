@@ -16,7 +16,7 @@ This page is fully accessible.
 ## Screenshot
 
 Here is a screenshot of my coding quiz application page:
-<img src="./assets/screenshot.png">
+<img src="./Assets/screenshot.png">
 
 
 ## Link to GitHub Repository
