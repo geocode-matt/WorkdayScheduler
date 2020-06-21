@@ -30,14 +30,29 @@ textarea{
 
 .grey {
   background-color: rgb(204, 199, 199);
+  border: thin;
+  border-color: white;
+  border-style: solid;
+  white-space: pre-wrap;
+  /* border-top: 1px solid white; */
 }
 
 .red {
   background-color: rgb(255, 61, 61);
+  border: thin;
+  border-color: white;
+  border-style: solid;
+  white-space: pre-wrap;
+  /* border-top: 1px solid white; */
 }
 
 .green {
   background-color: rgb(104, 224, 104);
+  border: thin;
+  border-color: white;
+  border-style: solid;
+  white-space: pre-wrap;
+  /* border-top: 1px solid white; */
 }
 
 .time-block{

@@ -5,38 +5,30 @@ var timeBlockContainer = document.getElementById("timeBlockHolder")
 timeBlockContainer.innerHTML = (now);
 $("now").text(moment().format('dddd MMMM Do'));
 
-// initially sets row colors when page opens
-$.each($('.time-block'), function() {
-    if ($(this).attr('id') === hour) {
-        $(this).addClass("red")
-    } else if ($(this).attr('id') < hour) {
-        $(this).addClass("grey") 
-    } else {
-        $(this).addClass("green") 
-    }
-    console.log("initial colors set");
-  });
-
 // function to update colors over the time interval
 var colorUpdater = function() {
-    $.each($('.time-block'), function() {
-        if ($(this).attr('id') === hour) {
-            $(this).addClass("red")
-        } else if ($(this).attr('id') < hour) {
-            $(this).addClass("grey") 
+    $('.time-block').each(function(index, element) {
+        console.log(element);
+        if ($(element).attr('id') === hour) {
+            $(element).find("textarea").addClass("red")
+        } else if ($(element).attr('id') < hour) {
+            $(element).find("textarea").addClass("grey") 
         } else {
-            $(this).addClass("green") 
+            $(element).find("textarea").addClass("green") 
         }
       });
       console.log("colors updated");
 }
+
+// initially sets row colors when page opens
+colorUpdater();
 
 // timer to update the date and to run the colorUpdater function
 setInterval(function() {
     var time = moment().format('LT');
     $(now).text(time);
     colorUpdater();
-}, 20000);
+}, 100000);
 
 
 // save button pushes the input data to localStorage
